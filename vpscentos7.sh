@@ -141,6 +141,8 @@ persist-key
 persist-tun
 status openvpn-status.log
 log openvpn.log
+comp-lzo no
+push "comp-lzo no"
 cipher none
 auth none
 verb 3
