@@ -3,7 +3,6 @@
 # Modified by Jeypi04
 #Requirement
 if [ ! -e /usr/bin/curl ]; then
-   yum -y update && yum -y upgrade
    yum -y install curl
 fi
 
@@ -74,7 +73,7 @@ cd
 
 # setting banner
 rm /etc/issue.net -f
-wget -O /etc/issue.net "https://www.dropbox.com/s/7p3a7h8fglsd3sj/issue.net?dl=1"
+wget -O /etc/issue.net "https://raw.githubusercontent.com/Jeypi04/openvpn-centos7/master/issue.net"
 sed -i '/Banner/a Banner="/etc/issue.net"' /etc/ssh/sshd_config
 sed -i 's@DROPBEAR_BANNER=""@DROPBEAR_BANNER="/etc/issue.net"@g' /etc/default/dropbear
 
